@@ -1,6 +1,6 @@
 package com.centime.test.controller;
 
-import com.centime.test.model.Person;
+import com.centime.test.model.PersonDTO;
 import com.centime.test.service.ConcatService;
 import com.centime.test.util.LogMethodParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class ConcatController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @LogMethodParam
-    public ResponseEntity<String> concat(@RequestBody Person person) {
+    public ResponseEntity<String> concat(@RequestBody PersonDTO person) {
         return ResponseEntity.of(concatService.concat(person));
     }
 }

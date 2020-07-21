@@ -1,7 +1,13 @@
+spring:
+  application:
+    name: hello-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: local
 management:
   endpoints:
-    enabled-by-default: true
-  info:
-    enabled: true
-server:
-  port: 5000
+    web:
+      exposure:
+        include: refresh

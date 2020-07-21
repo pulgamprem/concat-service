@@ -1,11 +1,11 @@
 package com.centime.test.service;
 
-import com.centime.test.model.Person;
+import com.centime.test.model.PersonDTO;
 
 import java.util.Optional;
 
 public interface ConcatService {
 
-    Optional<String> concat(Person person);
+    Optional<String> concat(PersonDTO person);
 
 }
